@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "name": "Reform",
+    "language": "is",
+    "description": "REFORM - Hreyfing · Næring · Svefn. Við hjálpum þér að fjölga heilbrigðum árum við æviskeiðið með fræðslu, þjálfun og sterku samfélagi.",
+    "favicon": "/public/favicon.png",
+    "ogImage": "/public/og.jpg"
+  },
+  "theme": {
+    "logoPath": "/public/logo.png",
+    "extractPrimaryFromLogo": true,
+    "palette": {
+      "primary": "#111111",
+      "primaryContrast": "#FFFFFF",
+      "accent": "#00B4A6",
+      "bg": "#FFFFFF",
+      "fg": "#0F172A",
+      "muted": "#6B7280",
+      "card": "#F8FAFC",
+      "border": "#E5E7EB"
+    },
+    "radius": 16,
+    "maxWidth": 1200,
+    "font": {
+      "heading": "Poppins, ui-sans-serif, system-ui",
+      "body": "Inter, ui-sans-serif, system-ui"
+    },
+    "buttons": {
+      "primary": { "shape": "rounded-2xl", "shadow": "md" },
+      "ghost": { "shape": "rounded-xl" }
+    }
+  },
+  "navigation": {
+    "brand": "REFORM",
+    "items": [
+      { "label": "Heim", "href": "#home" },
+      { "label": "Um okkur", "href": "#about" },
+      { "label": "Tilboð", "href": "#offer" },
+      { "label": "Umsagnir", "href": "#testimonials" },
+      { "label": "Hafa samband", "href": "#contact", "variant": "button" }
+    ],
+    "sticky": true
+  },
+  "pages": [
+    {
+      "id": "home",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "split",
+          "eyebrow": "Hreyfing · Næring · Svefn",
+          "title": "Fjölgaðu heilbrigðum árum lífsins",
+          "subtitle": "Við hjálpum þér að byggja upp heilbrigðar venjur með fræðslu, þjálfun og sterku samfélagi.",
+          "bullets": [
+            "Skýr áætlun fyrir hreyfingu, næringu og svefn",
+            "Einfaldleiki og eftirfylgni sem skilar árangri",
+            "Persónuleg aðstoð í gegnum spjall"
+          ],
+          "ctaPrimary": { "label": "Skrá mig", "href": "#contact" },
+          "ctaSecondary": { "label": "Sjá tilboðin", "href": "#offer", "variant": "ghost" },
+          "media": { "kind": "image", "src": "/public/hero.jpg", "alt": "Hreint og einfalt æfingasvæði" },
+          "bg": { "tintPrimary": 0.04 }
+        },
+        {
+          "type": "features-row",
+          "title": "Það sem þú færð",
+          "items": [
+            { "icon": "chat-bubble-left-right", "title": "Stöðug samskipti", "text": "Persónuleg samskipti við þjálfara í gegnum spjall – spurningar fá svör fljótt." },
+            { "icon": "sparkles", "title": "Næringargildi", "text": "Val um leiðir til að halda utan um mataræði – allt frá fullbúnum matseðlum til \"If it fits your macros\"." },
+            { "icon": "trophy", "title": "Vikulegar uppfærslur", "text": "Þú sendir inn mælingar og stöðu á viku fresti og við stillum plan til að hámarka árangur." },
+            { "icon": "dumbbell", "title": "Sérsniðið æfingaplan", "text": "Æfingar aðlöguð að markmiðum, tíma og aðstæðum – heima eða í rækt." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "anchor": "#about",
+      "sections": [
+        {
+          "type": "section-header",
+          "title": "Um okkur",
+          "subtitle": "REFORM er fræðsla, þjálfun og samfélag – með fókus á hreyfingu, næringu og svefn."
+        },
+        {
+          "type": "profiles",
+          "grid": 2,
+          "cards": [
+            {
+              "name": "Kolfinna",
+              "role": "Þjálfari · Hreyfing & Næring",
+              "image": "/public/kolfinna.png",
+              "bio": "Kolfinna leggur áherslu á einfaldar lausnir sem passa inn í daglegt líf. Hún sameinar styrktarþjálfun, hreyfifærni og næringarfræðslu til að byggja upp sjálfstæði og stöðugar venjur."
+            },
+            {
+              "name": "Jens",
+              "role": "Þjálfari · Hreyfing & Svefn",
+              "image": "/public/jens.png",
+              "bio": "Jens vinnur markvisst með áætlun, eftirfylgni og svefnhegðun til að hámarka endurheimt og árangur. Skýr markmið, einfalt framkvæmdarskref – mælanlegur árangur."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "offer",
+      "anchor": "#offer",
+      "sections": [
+        {
+          "type": "section-header",
+          "title": "Tilboð",
+          "subtitle": "Einfalt verð – allt sem þú þarft til að komast áfram."
+        },
+        {
+          "type": "pricing-cards",
+          "columns": 3,
+          "plans": [
+            {
+              "name": "Ræsing",
+              "price": "14.990 kr./mán",
+              "badge": "Fyrir byrjendur",
+              "features": [
+                "Sérsniðið æfingaplan",
+                "Grunnleiðbeiningar um næringu",
+                "Vikuleg stöðumat í appi",
+                "Spjall við þjálfara (48 klst. svörun)"
+              ],
+              "cta": { "label": "Velja Ræsing", "href": "#contact" }
+            },
+            {
+              "name": "Kjarni",
+              "price": "19.990 kr./mán",
+              "badge": "Vinsælast",
+              "highlight": true,
+              "features": [
+                "Æfingaplan + næringaráætlun",
+                "Svefngreining & venjur",
+                "Vikulegar uppfærslur og aðlögun",
+                "Spjall við þjálfara (innan 24 klst.)"
+              ],
+              "cta": { "label": "Velja Kjarni", "href": "#contact" }
+            },
+            {
+              "name": "Áfangar",
+              "price": "29.990 kr./mán",
+              "badge": "Með meiri eftirfylgni",
+              "features": [
+                "Djúp vinna með markmiðasetningu",
+                "Matsfundur á 2ja vikna fresti",
+                "Sérhæfð næringarstuðningur",
+                "Forgangsspjall (innan dags)"
+              ],
+              "cta": { "label": "Velja Áfangar", "href": "#contact" }
+            }
+          ],
+          "note": "Hafðu samband ef þú þarft fyrirtækja- eða hóplaust."
+        }
+      ]
+    },
+    {
+      "id": "testimonials",
+      "anchor": "#testimonials",
+      "sections": [
+        {
+          "type": "section-header",
+          "title": "Umsagnir",
+          "subtitle": "Raunverulegar niðurstöður og reynsla."
+        },
+        {
+          "type": "testimonials",
+          "style": "cards",
+          "items": [
+            {
+              "quote": "Þetta var akkúrat það sem ég þurfti á þessum tímapunkti til að koma mér af stað í hreyfingu. Ég lærði að ég get gert styrktaræfingar heima án þess að það sé brjálað fyrirhöfn. Fræðslan er mjög gagnleg og auðlesin og myndböndin ótrúlega skýr og gagnleg. Þetta hefur hvatt mig til að koma inn góðum venjum og minnir mig á að allt telur þegar kemur að hreyfingu, það er ekki allt eða ekkert. Er búin að vera ótrúlega ánægð með þetta og þetta er svo vandað og vel gert hjá ykkur! Snillingar!",
+              "author": "Nafn ekki birt",
+              "image": "/public/testimonial1.png"
+            },
+            {
+              "quote": "Ég get eindregið mælt með Kol...",
+              "author": "Nafn ekki birt",
+              "image": "/public/testimonial2.png"
+            },
+            {
+              "quote": "Þetta prógram hjálpaði mér mikið...",
+              "author": "Nafn ekki birt",
+              "image": "/public/testimonial3.png"
+            },
+            {
+              "quote": "Ég var mjög skeptísk í byrjun...",
+              "author": "Nafn ekki birt",
+              "image": "/public/testimonial4.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "anchor": "#contact",
+      "sections": [
+        {
+          "type": "section-header",
+          "title": "Hafa samband",
+          "subtitle": "Fylltu út formið og við svörum fljótt."
+        },
+        {
+          "type": "contact-form",
+          "successMessage": "Takk fyrir! Skilaboðin þín bárust og við höfum samband sem fyrst.",
+          "fields": [
+            { "name": "name", "label": "Nafn", "type": "text", "required": true },
+            { "name": "email", "label": "Netfang", "type": "email", "required": true },
+            { "name": "phone", "label": "Símanúmer", "type": "tel", "required": false },
+            {
+              "name": "interest",
+              "label": "Ég hef áhuga á",
+              "type": "select",
+              "required": true,
+              "options": ["Ræsing", "Kjarni", "Áfangar"]
+            },
+            { "name": "message", "label": "Skilaboð", "type": "textarea", "required": true }
+          ]
+        }
+      ]
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/reform"
+  }
+}
