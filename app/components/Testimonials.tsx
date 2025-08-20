@@ -7,6 +7,12 @@ export default function Testimonials() {
 
   if (!headerSection || !testimonialsSection) return null
 
+  // Check if testimonialsSection has items property
+  if (!testimonialsSection.items || !Array.isArray(testimonialsSection.items)) {
+    console.warn('Testimonials section missing items array:', testimonialsSection)
+    return null
+  }
+
   return (
     <div className="py-20">
       {/* Section Header */}
