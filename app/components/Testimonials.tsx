@@ -7,8 +7,10 @@ export default function Testimonials() {
 
   if (!headerSection || !testimonialsSection) return null
 
-  // Check if testimonialsSection has items property
-  if (!testimonialsSection.items || !Array.isArray(testimonialsSection.items)) {
+  // Type assertion to handle the items property
+  const testimonials = (testimonialsSection as any).items
+
+  if (!testimonials || !Array.isArray(testimonials)) {
     console.warn('Testimonials section missing items array:', testimonialsSection)
     return null
   }
@@ -54,7 +56,7 @@ export default function Testimonials() {
 
       {/* Testimonials Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {testimonialsSection.items.slice(1).map((testimonial: any, index: number) => (
+        {testimonials.slice(1).map((testimonial: any, index: number) => (
           <div key={index} className="card group hover:shadow-xl transition-all duration-300 hover:scale-105">
             {/* Quote */}
             <div className="mb-6">
