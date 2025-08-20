@@ -5,6 +5,14 @@ export default function WhatIsReform() {
 
   if (!featuresSection) return null
 
+  // Type assertion to handle the features items
+  const features = (featuresSection as any).items
+
+  if (!features || !Array.isArray(features)) {
+    console.warn('Features section missing items array:', featuresSection)
+    return null
+  }
+
   const getIcon = (iconName: string) => {
     const icons: { [key: string]: JSX.Element } = {
       'chat-bubble-left-right': (
@@ -46,7 +54,7 @@ export default function WhatIsReform() {
 
       {/* Features Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {featuresSection.items.map((feature: any, index: number) => (
+        {features.map((feature: any, index: number) => (
           <div key={index} className="card text-center group">
             {/* Icon */}
             <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
