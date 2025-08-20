@@ -10,6 +10,9 @@ export default function VideoHero() {
 
   if (!heroSection) return null
 
+  // Type assertion to handle the hero section properties
+  const hero = heroSection as any
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
@@ -73,22 +76,22 @@ export default function VideoHero() {
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         {/* Eyebrow */}
         <div className="inline-flex items-center px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
-          {heroSection.eyebrow}
+          {hero.eyebrow}
         </div>
 
         {/* Title */}
         <h1 className="text-5xl lg:text-7xl font-bold font-heading leading-tight text-balance mb-6">
-          {heroSection.title}
+          {hero.title}
         </h1>
 
         {/* Subtitle */}
         <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-8">
-          {heroSection.subtitle}
+          {hero.subtitle}
         </p>
 
         {/* Bullets */}
         <ul className="space-y-4 mb-10 max-w-2xl mx-auto">
-          {heroSection.bullets.map((bullet: string, index: number) => (
+          {hero.bullets?.map((bullet: string, index: number) => (
             <li key={index} className="flex items-center justify-center space-x-3">
               <div className="flex-shrink-0 w-6 h-6 bg-accent rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -103,16 +106,16 @@ export default function VideoHero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => scrollToSection(heroSection.ctaPrimary.href)}
+            onClick={() => scrollToSection(hero.ctaPrimary?.href || '#contact')}
             className="btn-primary text-lg px-10 py-5"
           >
-            {heroSection.ctaPrimary.label}
+            {hero.ctaPrimary?.label || 'Skrá mig'}
           </button>
           <button
-            onClick={() => scrollToSection(heroSection.ctaSecondary.href)}
+            onClick={() => scrollToSection(hero.ctaSecondary?.href || '#what-is-reform')}
             className="btn-ghost text-lg px-10 py-5 border-white text-white hover:bg-white hover:text-primary"
           >
-            {heroSection.ctaSecondary.label}
+            {hero.ctaSecondary?.label || 'Læra meira'}
           </button>
         </div>
       </div>
